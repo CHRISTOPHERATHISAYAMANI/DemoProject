@@ -1,0 +1,13 @@
+<br>
+<div class="form-group">
+    <label  class="control-label col-sm-4" for="pwd">Getting the value from parent : {{childCall}}</label>
+  </div>
+    <div>
+     <label  class="control-label col-sm-2" for="email">Input from Child to Parent:</label>
+        <div class="col-sm-10"> 
+    <input name="Passing"[(ngModel)]="passToParentTxt"/>
+  </div>  
+  </div>
+  
+
+<button (click)=addData()>Click to parent</button>
