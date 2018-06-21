@@ -10,10 +10,11 @@ import { FooterComponent } from './footer/footer.component';
 import { DonarService } from './donar.service';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent, HeaderComponent, ContentComponent, FooterComponent, ParentComponent, ChildComponent
+    AppComponent, HeaderComponent, ContentComponent, FooterComponent, ParentComponent, ChildComponent, FilterPipe
   ],
   imports: [
     BrowserModule,TableModule, HttpClientModule, FormsModule

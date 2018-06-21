@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {DonationCamp} from './donation-camp';
 
 import { DonarService } from '../donar.service';
+import {FilterPipe} from '../filter.pipe';
 import { BloodDonar } from './blood-donar';
 @Component({
   selector: 'app-content',
@@ -15,6 +16,7 @@ export class ContentComponent implements OnInit {
   ClickHere:string ="Click Here";
   clickInfo: string;
   outline :boolean; 
+  custFilter: string;
   constructor(private donarService:DonarService) { 
     
   }

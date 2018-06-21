@@ -15,4 +15,11 @@
                     {{childValue}}
                 </div>
         </div>
-<app-child [childCall]=parentToCall (toParent)="onChange($event)"></app-child>
+        <ul class="list-group">
+                <li class="list-group-item" *ngFor="let recipient of donarInFrmChild">
+                  {{recipient}}
+                 </li>
+              
+              
+              </ul>
+<app-child [childCall]=parentToCall (toParent)="onChange($event)" (aliasParentMap)="onCall($event)" (getInputParentMap)="searchIn($event)"></app-child>

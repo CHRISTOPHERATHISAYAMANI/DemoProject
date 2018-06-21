@@ -7,10 +7,11 @@
   <h4>Plain Table Display</h4>
   <div class="container">
     <h1>Grid</h1>
-    <p>This example demonstrates a 50%/50% split on small, medium and large devices. On extra small devices, it will stack (100% width).</p>      
-    <p>Resize the browser window to see the effect.</p>      
+      
     <div class="row">
-        <div class="col-sm-6" style="background-color:darkgray;">
+      <label>Customer Filter</label>
+        <input type="text" class="form-control" name="cusFilter" [(ngModel)]="custFilter"/>
+        <div class="col-sm-12" style="background-color:darkgray;">
 <table class="table table-striped"> 
   <tr>
     <th>Name</th>
@@ -20,7 +21,7 @@
     <th>Phone</th>
     <th>Email</th>
   </tr>
-  <tr *ngFor="let cm of camp ">
+  <tr *ngFor="let cm of camp |filter:'name':custFilter">
     <td>{{cm.name}}</td>
     <td>{{cm.org}}</td>
     <td>{{cm.age}}</td>
